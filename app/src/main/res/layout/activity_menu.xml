@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFA500"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:id="@+id/menuTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Main Menu"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:columnCount="2"
+        android:rowCount="5"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonFeature1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Customized Exercise Plans" />
+
+        <Button
+            android:id="@+id/medicalHistoryButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Input Owner's and Pet's Medical History" />
+
+        <Button
+            android:id="@+id/nutritionTrackerButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Nutrition Tracker" />
+
+        <Button
+            android:id="@+id/goalSettingButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Goal Setting" />
+
+        <Button
+            android:id="@+id/weightExerciseTrackingButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Track Owner's and Pet's Weight and Exercise Routines" />
+
+        <Button
+            android:id="@+id/exerciseGuidelinesButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Exercises Guidelines Tutorials" />
+
+        <Button
+            android:id="@+id/openReminderActivityButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Set Reminders for Exercises, Appointments, Medications" />
+
+        <Button
+            android:id="@+id/btnSendSms"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Connect with other Pet Owners" />
+
+        <Button
+            android:id="@+id/findPlacesButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Find Local Owner and Pet-Friendly Places" />
+
+        <Button
+            android:id="@+id/articlesButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:text="Pet Health and Fitness Articles" />
+    </GridLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppProject</string>
+        <string-array name="owner_fitness_levels">
+            <item>Beginner</item>
+            <item>Intermediate</item>
+            <item>Advanced</item>
+        </string-array>
+</resources>

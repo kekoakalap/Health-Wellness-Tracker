@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/orange">
+
+    <TextView
+        android:id="@+id/articlesTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health and Fitness Articles"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/petHealthButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet Health"
+        android:textColor="#FFFFFF"
+        android:background="@color/black"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/petFitnessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet Fitness"
+        android:textColor="#FFFFFF"
+        android:background="@color/black"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/humanFitnessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Human Fitness"
+        android:textColor="#FFFFFF"
+        android:background="@color/black"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/petNutritionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet Nutrition"
+        android:textColor="#FFFFFF"
+        android:background="@color/black"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/humanHealthButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Human Health"
+        android:textColor="#FFFFFF"
+        android:background="@color/black" />
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF8C00"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/exerciseGuidelinesTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise Guidelines Tutorials"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/openYogaTutorialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Open Yoga Tutorial"
+        android:textColor="#FFFFFF"
+        android:background="#000000" />
+
+    <Button
+        android:id="@+id/openExerciseTutorialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Open Exercise Tutorial"
+        android:textColor="#FFFFFF"
+        android:background="#000000" />
+
+    <Button
+        android:id="@+id/openRunningTutorialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Open Running Tutorial"
+        android:textColor="#FFFFFF"
+        android:background="#000000" />
+
+</LinearLayout>
