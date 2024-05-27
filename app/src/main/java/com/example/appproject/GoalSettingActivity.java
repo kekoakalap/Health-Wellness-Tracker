@@ -25,7 +25,6 @@ public class GoalSettingActivity extends AppCompatActivity {
     private EditText petGoalEditText;
     private Button submitGoalsButton;
     private TextView ownerGoalTextView;
-    private TextView petGoalTextView;
     private TextView motivationalMessageTextView;
 
     // Add Firestore
@@ -49,7 +48,6 @@ public class GoalSettingActivity extends AppCompatActivity {
         ownerGoalEditText = findViewById(R.id.ownerGoalEditText);
         submitGoalsButton = findViewById(R.id.submitGoalsButton);
         ownerGoalTextView = findViewById(R.id.ownerGoalTextView);
-        petGoalTextView = findViewById(R.id.petGoalTextView);
         motivationalMessageTextView = findViewById(R.id.motivationalMessageTextView);
         setupSubmitGoalsButton();
     }
