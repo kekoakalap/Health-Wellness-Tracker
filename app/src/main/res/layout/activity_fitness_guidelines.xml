@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#262626"
+    tools:context=".FitnessGuidelines">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="889dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+
+            android:gravity="center"
+            android:text="Fitness Guidelines"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+
+            android:gravity="center"
+            android:text="Following fitness guidelines is essential for maintaining health, preventing disease, and ensuring a balanced and effective workout routine."
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="134dp"
+                    android:layout_height="85dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/screenshot_2024_05_27_154439"
+                    tools:srcCompat="@drawable/screenshot_2024_05_27_154439" />
+
+                <Button
+                    android:id="@+id/btnBicep"
+                    android:layout_width="300dp"
+                    android:layout_height="79dp"
+                    android:layout_weight="1"
+                    android:text="Bicep Fitness Guide" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/screenshot_2024_05_27_154612"
+                    tools:srcCompat="@drawable/screenshot_2024_05_27_154612" />
+
+                <Button
+                    android:id="@+id/btnChest"
+                    android:layout_width="300dp"
+                    android:layout_height="79dp"
+                    android:layout_weight="1"
+                    android:text="Chest Fitness Guide" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/screenshot_2024_05_27_154702"
+                    tools:srcCompat="@drawable/screenshot_2024_05_27_154702" />
+
+                <Button
+                    android:id="@+id/btnLegs"
+                    android:layout_width="300dp"
+                    android:layout_height="79dp"
+                    android:layout_weight="1"
+                    android:text="Legs Fitness guide" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="136dp"
+                    android:layout_height="90dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/screenshot_2024_05_27_154846"
+                    tools:srcCompat="@drawable/screenshot_2024_05_27_154846" />
+
+                <Button
+                    android:id="@+id/btnTricep"
+                    android:layout_width="300dp"
+                    android:layout_height="79dp"
+                    android:layout_weight="1"
+                    android:text="tricep fitness guide" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="131dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/screenshot_2024_05_27_155010"
+                    tools:srcCompat="@drawable/screenshot_2024_05_27_155010" />
+
+                <Button
+                    android:id="@+id/btnShoulders"
+                    android:layout_width="300dp"
+                    android:layout_height="79dp"
+                    android:layout_weight="1"
+                    android:text="shoulders fitness guide" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

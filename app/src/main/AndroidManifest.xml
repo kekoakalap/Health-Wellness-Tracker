@@ -4,7 +4,7 @@
     package="com.example.appproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".CustomizedExercisePlansActivity"
+            android:name=".FitnessGuidelines"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalExercisePlans"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
@@ -24,16 +27,16 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MedicalHistoryActivity" />
         <activity android:name=".NutritionTrackerActivity" />
-        <activity android:name=".GoalSettingActivity"/>
+        <activity android:name=".GoalSettingActivity" />
         <activity android:name=".WeightExerciseTrackingActivity" />
-        <activity android:name=".ExerciseGuidelinesActivity" />
-        <activity android:name=".ReminderActivity"/>
-        <activity android:name=".FindPlacesActivity"/>
-        <activity android:name=".ArticlesActivity"/>
+        <activity android:name=".ReminderActivity" />
+        <activity android:name=".FindPlacesActivity" />
     </application>
+
 </manifest>

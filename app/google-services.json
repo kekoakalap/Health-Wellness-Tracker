@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "772544505435",
-    "project_id": "appproject-83f8f",
-    "storage_bucket": "appproject-83f8f.appspot.com"
+    "project_number": "286534869814",
+    "project_id": "healthwellnesstracker",
+    "storage_bucket": "healthwellnesstracker.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:772544505435:android:f111b1f4d42132a25d417e",
+        "mobilesdk_app_id": "1:286534869814:android:d8cc6a84292d3e945c4997",
         "android_client_info": {
           "package_name": "com.example.appproject"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "772544505435-hg5c53kcj26lkqaome1ndkvjgpsn6kos.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC1kyQtjexr-2MQnxCkeAeVQbz9cRdnLDw"
+          "current_key": "AIzaSyBQCuyFB09THjkuBYXNZAZKu9CEeDJ1EAs"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "772544505435-hg5c53kcj26lkqaome1ndkvjgpsn6kos.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

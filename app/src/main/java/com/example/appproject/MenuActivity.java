@@ -19,7 +19,7 @@ public class MenuActivity extends AppCompatActivity {
         buttonFeature1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, CustomizedExercisePlansActivity.class);
+                Intent intent = new Intent(MenuActivity.this, PersonalExercisePlans.class);
                 startActivity(intent);
             }
         });
@@ -59,11 +59,11 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button exerciseGuidelinesButton = findViewById(R.id.exerciseGuidelinesButton);
-        exerciseGuidelinesButton.setOnClickListener(new View.OnClickListener() {
+        Button fitnessGuidelinesButton = findViewById(R.id.fitnessGuidelinesButton);
+        fitnessGuidelinesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, ExerciseGuidelinesActivity.class);
+                Intent intent = new Intent(MenuActivity.this, FitnessGuidelines.class);
                 startActivity(intent);
             }
         });
@@ -92,14 +92,7 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button articlesButton = findViewById(R.id.articlesButton);
-        articlesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, ArticlesActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
     private void openSmsApp() {

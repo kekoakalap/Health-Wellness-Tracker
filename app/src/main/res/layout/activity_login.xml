@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#FF8C00"
+    android:background="#262626"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/image"/>
 
     <TextView
     android:id="@+id/appNameTextView"
@@ -22,7 +23,7 @@
     android:layout_below="@id/logoImageView"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="16dp"
-    android:text="Get fit with your furry friend: Pet+Fit makes it easy."
+    android:text="Shape you Body with  Get+Fit, Makes it easy."
     android:textSize="16sp"
     android:textStyle="bold"
     android:textColor="#FFFFFF"
