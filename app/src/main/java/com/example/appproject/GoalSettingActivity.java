@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -21,23 +22,22 @@ import java.util.Random;
 
 public class GoalSettingActivity extends AppCompatActivity {
 
-    private EditText ownerGoalEditText;
-    private EditText petGoalEditText;
+    private EditText fitnessGoalEditText;
     private Button submitGoalsButton;
-    private TextView ownerGoalTextView;
+    private TextView fitnessGoalTextView;
     private TextView motivationalMessageTextView;
 
-    // Add Firestore
+
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    // Array of motivational messages
+
     private String[] motivationalMessages = {
             "You can do it!",
             "Keep going!",
             "Don't give up!",
             "Every step counts!",
             "Believe in yourself!"
-            // Add more messages as needed
+
     };
 
     @Override
@@ -45,9 +45,9 @@ public class GoalSettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal_setting);
 
-        ownerGoalEditText = findViewById(R.id.ownerGoalEditText);
+        fitnessGoalEditText = findViewById(R.id.fitnessGoalEditText);
         submitGoalsButton = findViewById(R.id.submitGoalsButton);
-        ownerGoalTextView = findViewById(R.id.ownerGoalTextView);
+        fitnessGoalTextView = findViewById(R.id.fitnessGoalTextView);
         motivationalMessageTextView = findViewById(R.id.motivationalMessageTextView);
         setupSubmitGoalsButton();
     }
@@ -59,15 +59,17 @@ public class GoalSettingActivity extends AppCompatActivity {
                 displayGoals();
                 displayMotivationalMessage();
                 saveToFirestore();
+
+
+                Toast.makeText(GoalSettingActivity.this, "Goals submitted successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void displayGoals() {
-        String ownerGoal = ownerGoalEditText.getText().toString();
-        String petGoal = petGoalEditText.getText().toString();
+        String fitnessGoal = fitnessGoalEditText.getText().toString();
 
-        ownerGoalTextView.setText("Owner's Fitness Goal:\n" + ownerGoal);
+        fitnessGoalTextView.setText("Fitness Goal:\n" + fitnessGoal);
     }
 
     private void displayMotivationalMessage() {
@@ -77,10 +79,10 @@ public class GoalSettingActivity extends AppCompatActivity {
     }
 
     private void saveToFirestore() {
-        String ownerGoal = ownerGoalEditText.getText().toString();
+        String fitnessGoal = fitnessGoalEditText.getText().toString();
 
         Map<String, Object> data = new HashMap<>();
-        data.put("ownerGoal", ownerGoal);
+        data.put("fitnessGoal", fitnessGoal);
 
         db.collection("goals")
                 .add(data)

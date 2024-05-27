@@ -24,7 +24,7 @@
             android:textColor="#FFFFFF" />
 
         <EditText
-            android:id="@+id/ownerGoalEditText"
+            android:id="@+id/fitnessGoalEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -45,20 +45,13 @@
             android:background="#000000" />
 
         <TextView
-            android:id="@+id/ownerGoalTextView"
+            android:id="@+id/fitnessGoalTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textSize="18sp"
             android:textColor="#FFFFFF" />
 
-        <TextView
-            android:id="@+id/petGoalTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF" />
         <TextView
             android:id="@+id/motivationalMessageTextView"
             android:layout_width="match_parent"
