@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF8C00"
+    android:background="#262626"
     tools:context=".GoalSettingActivity">
 
     <LinearLayout
@@ -28,21 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Owner's Fitness Goal"
+            android:background="@android:color/white"
+            android:hint="Your Fitness Goal"
             android:inputType="textMultiLine"
             android:lines="5"
-            android:background="@android:color/white"
-            android:padding="8dp" />
-
-        <EditText
-            android:id="@+id/petGoalEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Pet's Fitness Goal"
-            android:inputType="textMultiLine"
-            android:lines="5"
-            android:background="@android:color/white"
             android:padding="8dp" />
 
         <Button

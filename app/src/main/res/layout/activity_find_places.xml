@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    android:background="#FFA500">
+    android:background="#262626">
 
     <TextView
         android:id="@+id/findPlacesTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Find Pet-Friendly Places"
+        android:text="Find Gyms Within Your Area"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF" />
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Open Pet-Friendly Places on Maps"
+        android:text="Open Gyms Within Your Area on Maps"
         android:textColor="#FFFFFF"
         android:background="@color/black" />
 </LinearLayout>

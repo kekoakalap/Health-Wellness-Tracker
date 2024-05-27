@@ -26,7 +26,7 @@ public class FindPlacesActivity extends AppCompatActivity {
     }
 
     private void openMaps() {
-        String uri = "geo:0,0?q=pet+friendly+places+Cebu+City+Philippines";
+        String uri = "geo:0,0?q=gym+Cebu+City+Philippines";
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
         startActivity(intent);
     }

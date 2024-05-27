@@ -37,9 +37,7 @@ public class WeightExerciseTrackingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weight_exercise_tracking);
 
         ownerCurrentWeightEditText = findViewById(R.id.ownerCurrentWeightEditText);
-        petCurrentWeightEditText = findViewById(R.id.petCurrentWeightEditText);
         ownerExerciseRoutineEditText = findViewById(R.id.ownerExerciseRoutineEditText);
-        petExerciseRoutineEditText = findViewById(R.id.petExerciseRoutineEditText);
         ownerWeightExerciseTextView = findViewById(R.id.ownerWeightExerciseTextView);
         petWeightExerciseTextView = findViewById(R.id.petWeightExerciseTextView);
 

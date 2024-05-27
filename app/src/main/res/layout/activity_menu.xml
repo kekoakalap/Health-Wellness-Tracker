@@ -82,7 +82,7 @@
             android:layout_margin="8dp"
             android:background="#000000"
             android:textColor="#FFFFFF"
-            android:text="Track Owner's and Pet's Weight and Exercise Routines" />
+            android:text="Track Your Weight and Exercise Routines" />
 
         <Button
             android:id="@+id/fitnessGuidelinesButton"
@@ -126,7 +126,7 @@
             android:layout_margin="8dp"
             android:background="#000000"
             android:textColor="#FFFFFF"
-            android:text="Find Local Owner and Pet-Friendly Places" />
+            android:text="Find Gyms Within Your Area Places" />
 
     </GridLayout>
 </LinearLayout>

@@ -47,7 +47,6 @@ public class GoalSettingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_goal_setting);
 
         ownerGoalEditText = findViewById(R.id.ownerGoalEditText);
-        petGoalEditText = findViewById(R.id.petGoalEditText);
         submitGoalsButton = findViewById(R.id.submitGoalsButton);
         ownerGoalTextView = findViewById(R.id.ownerGoalTextView);
         petGoalTextView = findViewById(R.id.petGoalTextView);
