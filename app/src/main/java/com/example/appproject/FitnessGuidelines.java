@@ -84,9 +84,20 @@ public class FitnessGuidelines extends AppCompatActivity {
     }
 
     // Method to open YouTube link
+    // Method to open YouTube link in a web browser
     private void openYoutube(String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
-        startActivity(intent);
+        intent.setPackage("com.android.chrome"); // Explicitly use Chrome if available
+
+        // Check if Chrome is installed and can handle the intent
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            // If Chrome is not installed, open with any available browser
+            intent.setPackage(null);
+            startActivity(intent);
+        }
     }
+
 }
