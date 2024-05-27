@@ -5,30 +5,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import androidx.annotation.NonNull;
-import android.util.Log;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-
 import java.util.HashMap;
 import java.util.Map;
+import android.util.Log;
 
 public class WeightExerciseTrackingActivity extends AppCompatActivity {
 
-    private EditText ownerCurrentWeightEditText;
-    private EditText petCurrentWeightEditText;
-    private EditText ownerExerciseRoutineEditText;
-    private EditText petExerciseRoutineEditText;
-    private TextView ownerWeightExerciseTextView;
-    private TextView petWeightExerciseTextView;
-
-    // Add Firestore
+    private EditText currentWeightEditText;
+    private EditText exerciseRoutineEditText;
+    private Button submitWeightExerciseButton;
+    private TextView weightExerciseTextView;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
@@ -36,12 +32,15 @@ public class WeightExerciseTrackingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight_exercise_tracking);
 
-        ownerCurrentWeightEditText = findViewById(R.id.ownerCurrentWeightEditText);
-        ownerExerciseRoutineEditText = findViewById(R.id.ownerExerciseRoutineEditText);
-        ownerWeightExerciseTextView = findViewById(R.id.ownerWeightExerciseTextView);
-        petWeightExerciseTextView = findViewById(R.id.petWeightExerciseTextView);
+        currentWeightEditText = findViewById(R.id.currentWeightEditText);
+        exerciseRoutineEditText = findViewById(R.id.exerciseRoutineEditText);
+        weightExerciseTextView = findViewById(R.id.weightExerciseTextView);
+        submitWeightExerciseButton = findViewById(R.id.submitWeightExerciseButton);
 
-        Button submitWeightExerciseButton = findViewById(R.id.submitWeightExerciseButton);
+        setupSubmitWeightExerciseButton();
+    }
+
+    private void setupSubmitWeightExerciseButton() {
         submitWeightExerciseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,39 +51,32 @@ public class WeightExerciseTrackingActivity extends AppCompatActivity {
     }
 
     private void updateWeightExerciseInfo() {
-        String ownerWeightExerciseInfo = "Owner's Current Weight: " + ownerCurrentWeightEditText.getText().toString() +
-                "\nOwner's Exercise Routine: " + ownerExerciseRoutineEditText.getText().toString();
-        ownerWeightExerciseTextView.setText(ownerWeightExerciseInfo);
-
-        String petWeightExerciseInfo = "Pet's Current Weight: " + petCurrentWeightEditText.getText().toString() +
-                "\nPet's Exercise Routine: " + petExerciseRoutineEditText.getText().toString();
-        petWeightExerciseTextView.setText(petWeightExerciseInfo);
+        String weightExerciseInfo = "Current Weight: " + currentWeightEditText.getText().toString() +
+                "\nExercise Routine: " + exerciseRoutineEditText.getText().toString();
+        weightExerciseTextView.setText(weightExerciseInfo);
     }
 
     private void saveToFirestore() {
-        String ownerCurrentWeight = ownerCurrentWeightEditText.getText().toString();
-        String petCurrentWeight = petCurrentWeightEditText.getText().toString();
-        String ownerExerciseRoutine = ownerExerciseRoutineEditText.getText().toString();
-        String petExerciseRoutine = petExerciseRoutineEditText.getText().toString();
+        String currentWeight = currentWeightEditText.getText().toString();
+        String exerciseRoutine = exerciseRoutineEditText.getText().toString();
 
         Map<String, Object> data = new HashMap<>();
-        data.put("ownerCurrentWeight", ownerCurrentWeight);
-        data.put("petCurrentWeight", petCurrentWeight);
-        data.put("ownerExerciseRoutine", ownerExerciseRoutine);
-        data.put("petExerciseRoutine", petExerciseRoutine);
+        data.put("currentWeight", currentWeight);
+        data.put("exerciseRoutine", exerciseRoutine);
 
         db.collection("weightExercise")
                 .add(data)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Log.d("Firestore", "DocumentSnapshot added with ID: " + documentReference.getId());
+                        Toast.makeText(WeightExerciseTrackingActivity.this, "Data submitted successfully", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.w("Firestore", "Error adding document", e);
+                        Toast.makeText(WeightExerciseTrackingActivity.this, "Error submitting data", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

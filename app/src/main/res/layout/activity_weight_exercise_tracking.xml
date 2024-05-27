@@ -23,7 +23,7 @@
             android:textColor="#FFFFFF" />
 
         <EditText
-            android:id="@+id/ownerCurrentWeightEditText"
+            android:id="@+id/currentWeightEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -33,7 +33,7 @@
             android:padding="8dp" />
 
         <EditText
-            android:id="@+id/ownerExerciseRoutineEditText"
+            android:id="@+id/exerciseRoutineEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -54,7 +54,7 @@
             android:textColor="#FFFFFF" />
 
         <TextView
-            android:id="@+id/ownerWeightExerciseTextView"
+            android:id="@+id/weightExerciseTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -71,4 +71,3 @@
 
     </LinearLayout>
 </ScrollView>
-
