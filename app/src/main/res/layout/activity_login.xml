@@ -23,7 +23,7 @@
     android:layout_below="@id/logoImageView"
     android:layout_centerHorizontal="true"
     android:layout_marginTop="16dp"
-    android:text="Shape you Body with  Get+Fit, Makes it easy."
+    android:text="Shape your Body with  Get+Fit, Makes it easy."
     android:textSize="16sp"
     android:textStyle="bold"
     android:textColor="#FFFFFF"
