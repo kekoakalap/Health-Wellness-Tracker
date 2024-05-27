@@ -70,7 +70,6 @@ public class GoalSettingActivity extends AppCompatActivity {
         String petGoal = petGoalEditText.getText().toString();
 
         ownerGoalTextView.setText("Owner's Fitness Goal:\n" + ownerGoal);
-        petGoalTextView.setText("Pet's Fitness Goal:\n" + petGoal);
     }
 
     private void displayMotivationalMessage() {
@@ -81,11 +80,9 @@ public class GoalSettingActivity extends AppCompatActivity {
 
     private void saveToFirestore() {
         String ownerGoal = ownerGoalEditText.getText().toString();
-        String petGoal = petGoalEditText.getText().toString();
 
         Map<String, Object> data = new HashMap<>();
         data.put("ownerGoal", ownerGoal);
-        data.put("petGoal", petGoal);
 
         db.collection("goals")
                 .add(data)
