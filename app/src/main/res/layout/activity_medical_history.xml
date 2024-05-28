@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF8C00"
+    android:background="#262626"
     tools:context=".MedicalHistoryActivity">
 
     <LinearLayout
@@ -13,33 +13,13 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/medicalHistoryTitleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Input Owner's and Pet's Medical History"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF" />
 
         <EditText
-            android:id="@+id/ownerMedicalHistoryEditText"
+            android:id="@+id/MedicalHistoryEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Owner's Medical History"
-            android:inputType="textMultiLine"
-            android:lines="5"
-            android:background="@android:color/white"
-            android:padding="8dp" />
-
-        <EditText
-            android:id="@+id/petMedicalHistoryEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Pet's Medical History"
             android:inputType="textMultiLine"
             android:lines="5"
             android:background="@android:color/white"
@@ -56,18 +36,10 @@
             android:background="#000000" />
 
         <TextView
-            android:id="@+id/ownerMedicalHistoryTextView"
+            android:id="@+id/MedicalHistoryTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF" />
-
-        <TextView
-            android:id="@+id/petMedicalHistoryTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:textSize="18sp"
             android:textColor="#FFFFFF" />
 

@@ -76,14 +76,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        // Adding the 8th feature button
-        Button btnSendSms = findViewById(R.id.btnSendSms);
-        btnSendSms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSmsApp();
-            }
-        });
+
         Button findPlacesButton = findViewById(R.id.findPlacesButton);
         findPlacesButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,14 +86,5 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    private void openSmsApp() {
-        String phoneNumber = "09183643605";  // Replace with the actual phone number
-        String message = "Hi, I'm using the Pet+Fit App..."; // Replace with your actual message
-
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + phoneNumber));
-        intent.putExtra("sms_body", message);
-        startActivity(intent);
     }
 }

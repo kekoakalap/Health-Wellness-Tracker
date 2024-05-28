@@ -48,8 +48,8 @@
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="#000000"
-            android:textColor="#FFFFFF"
-            android:text="Input Owner's and Pet's Medical History" />
+            android:text="Input Medical History"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/nutritionTrackerButton"
@@ -106,16 +106,6 @@
             android:textColor="#FFFFFF"
             android:text="Set Reminders for Exercises, Appointments, Medications" />
 
-        <Button
-            android:id="@+id/btnSendSms"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="8dp"
-            android:background="#000000"
-            android:textColor="#FFFFFF"
-            android:text="Connect with other Pet Owners" />
 
         <Button
             android:id="@+id/findPlacesButton"

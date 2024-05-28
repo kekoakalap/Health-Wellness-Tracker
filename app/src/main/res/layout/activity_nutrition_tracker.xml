@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF8C00"
+    android:background="#262626"
     tools:context=".NutritionTrackerActivity">
 
     <LinearLayout
@@ -24,22 +24,11 @@
             android:textColor="#FFFFFF" />
 
         <EditText
-            android:id="@+id/ownerDietEditText"
+            android:id="@+id/DietEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Owner's Dietary Habits"
-            android:inputType="textMultiLine"
-            android:lines="5"
-            android:background="@android:color/white"
-            android:padding="8dp" />
-
-        <EditText
-            android:id="@+id/petDietEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Pet's Dietary Habits"
+            android:hint="Dietary Habits"
             android:inputType="textMultiLine"
             android:lines="5"
             android:background="@android:color/white"
@@ -56,20 +45,13 @@
             android:background="#000000" />
 
         <TextView
-            android:id="@+id/ownerDietAnalysisTextView"
+            android:id="@+id/DietAnalysisTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textSize="18sp"
             android:textColor="#FFFFFF" />
 
-        <TextView
-            android:id="@+id/petDietAnalysisTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 </ScrollView>

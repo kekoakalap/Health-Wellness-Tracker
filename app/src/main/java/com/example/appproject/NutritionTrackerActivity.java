@@ -20,12 +20,9 @@ import java.util.Random;
 
 public class NutritionTrackerActivity extends AppCompatActivity {
 
-    private EditText ownerDietEditText;
-    private EditText petDietEditText;
+    private EditText DietEditText;
     private Button analyzeDietButton;
-    private TextView ownerDietAnalysisTextView;
-    private TextView petDietAnalysisTextView;
-
+    private TextView DietAnalysisTextView;
     private String[] insightsAndRecommendations;
 
     // Add Firestore
@@ -36,11 +33,10 @@ public class NutritionTrackerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrition_tracker);
 
-        ownerDietEditText = findViewById(R.id.ownerDietEditText);
-        petDietEditText = findViewById(R.id.petDietEditText);
+        DietEditText = findViewById(R.id.DietEditText);
         analyzeDietButton = findViewById(R.id.analyzeDietButton);
-        ownerDietAnalysisTextView = findViewById(R.id.ownerDietAnalysisTextView);
-        petDietAnalysisTextView = findViewById(R.id.petDietAnalysisTextView);
+        DietAnalysisTextView = findViewById(R.id.DietAnalysisTextView);
+
         setupAnalyzeDietButton();
 
         insightsAndRecommendations = new String[] {
@@ -48,12 +44,6 @@ public class NutritionTrackerActivity extends AppCompatActivity {
                 "Regular exercise is key to maintain good health.",
                 "Drink plenty of water daily.",
                 "Limit the intake of processed food."
-                //"Regularly feed your pet with pet-specific nutrient rich food.",
-                //"Ensure your pet gets regular exercise.",
-                //"Ensure your pet has access to clean water at all times.",
-                //"Avoid feeding your pet with human food as it may not be suitable for their health.",
-                //"Regular vet checkups are important for your pet's health.",
-                //"Ensure to follow the diet recommended by the vet for your pet."
         };
     }
 
@@ -68,14 +58,14 @@ public class NutritionTrackerActivity extends AppCompatActivity {
     }
 
     private void displayDietAnalysis() {
-        String ownerDiet = ownerDietEditText.getText().toString();
-        String petDiet = petDietEditText.getText().toString();
+        String Diet = DietEditText.getText().toString();
 
-        String ownerAnalysis = "Owner's Dietary Habits:\n" + ownerDiet + "\nInsights & Recommendations:\n" + getRandomInsight();
-        String petAnalysis = "Pet's Dietary Habits:\n" + petDiet + "\nInsights & Recommendations:\n" + getRandomInsight();
 
-        ownerDietAnalysisTextView.setText(ownerAnalysis);
-        petDietAnalysisTextView.setText(petAnalysis);
+        String Analysis = "Dietary Habits:\n" + Diet + "\nInsights & Recommendations:\n" + getRandomInsight();
+
+
+        DietAnalysisTextView.setText(Analysis);
+
     }
 
     private String getRandomInsight() {
@@ -85,12 +75,12 @@ public class NutritionTrackerActivity extends AppCompatActivity {
     }
 
     private void saveToFirestore() {
-        String ownerDiet = ownerDietEditText.getText().toString();
-        String petDiet = petDietEditText.getText().toString();
+        String Diet = DietEditText.getText().toString();
+
 
         Map<String, Object> data = new HashMap<>();
-        data.put("ownerDiet", ownerDiet);
-        data.put("petDiet", petDiet);
+        data.put("Diet", Diet);
+
 
         db.collection("nutritionTracker")
                 .add(data)

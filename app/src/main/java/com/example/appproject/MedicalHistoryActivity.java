@@ -20,11 +20,10 @@ import java.util.Map;
 
 public class MedicalHistoryActivity extends AppCompatActivity {
 
-    private EditText ownerMedicalHistoryEditText;
-    private EditText petMedicalHistoryEditText;
+    private EditText MedicalHistoryEditText;
     private Button submitMedicalHistoryButton;
-    private TextView ownerMedicalHistoryTextView;
-    private TextView petMedicalHistoryTextView;
+    private TextView MedicalHistoryTextView;
+
 
     // Add Firestore
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -34,11 +33,11 @@ public class MedicalHistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_history);
 
-        ownerMedicalHistoryEditText = findViewById(R.id.ownerMedicalHistoryEditText);
-        petMedicalHistoryEditText = findViewById(R.id.petMedicalHistoryEditText);
+        MedicalHistoryEditText = findViewById(R.id.MedicalHistoryEditText);
+
         submitMedicalHistoryButton = findViewById(R.id.submitMedicalHistoryButton);
-        ownerMedicalHistoryTextView = findViewById(R.id.ownerMedicalHistoryTextView);
-        petMedicalHistoryTextView = findViewById(R.id.petMedicalHistoryTextView);
+        MedicalHistoryTextView = findViewById(R.id.MedicalHistoryTextView);
+
 
         setupSubmitMedicalHistoryButton();
     }
@@ -54,20 +53,18 @@ public class MedicalHistoryActivity extends AppCompatActivity {
     }
 
     private void displaySubmittedMedicalHistory() {
-        String ownerMedicalHistory = ownerMedicalHistoryEditText.getText().toString();
-        String petMedicalHistory = petMedicalHistoryEditText.getText().toString();
+        String MedicalHistory = MedicalHistoryEditText.getText().toString();
 
-        ownerMedicalHistoryTextView.setText("Owner's Medical History:\n" + ownerMedicalHistory);
-        petMedicalHistoryTextView.setText("Pet's Medical History:\n" + petMedicalHistory);
+
+        MedicalHistoryTextView.setText("Medical History:\n" + MedicalHistory);
+
     }
 
     private void saveToFirestore() {
-        String ownerMedicalHistory = ownerMedicalHistoryEditText.getText().toString();
-        String petMedicalHistory = petMedicalHistoryEditText.getText().toString();
+        String MedicalHistory = MedicalHistoryEditText.getText().toString();
 
         Map<String, Object> data = new HashMap<>();
-        data.put("ownerMedicalHistory", ownerMedicalHistory);
-        data.put("petMedicalHistory", petMedicalHistory);
+        data.put("MedicalHistory", MedicalHistory);
 
         db.collection("medicalHistories")
                 .add(data)
